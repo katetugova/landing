@@ -1,0 +1,1109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(20, 14, 23, 1);
+    font-family: "Manrope", sans-serif;
+    color: rgba(255, 255, 255, 1);
+    padding: 64px 20px;
+}
+
+.h3-padding {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #F5FA93;
+    padding-left: 24px;
+}
+
+.mb-80 {
+    margin-bottom: 80px;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.desctop-menu {
+    display: flex;
+    gap: 40px;
+    background: rgba(51, 51, 51, 1);
+    border-radius: 32px;
+    padding: 18px 24px;
+}
+
+.desctop-menu .logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(245, 250, 147, 1);
+    padding: 8px 16px;
+    border-radius: 16px;
+}
+
+.desctop-menu .logo .text-logo {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.desctop-menu .nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.desctop-menu .nav .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+}
+
+.desctop-menu .nav-list .item {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.desctop-menu .login {
+    background: rgba(235, 235, 235, 1);
+    padding: 6px 16px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    flex-direction: column;
+    gap: 54px;
+    background: rgba(51, 51, 51, 1);
+    border-radius: 32px;
+    padding: 18px 24px;
+    width: 100%;
+}
+
+.mobile-menu .close-state {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobile-menu .close-state .logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(245, 250, 147, 1);
+    padding: 8px 16px;
+    border-radius: 16px;
+}
+
+.mobile-menu .close-state .logo .text-logo {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.mobile-menu .burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+
+.mobile-menu .close-state .burger {
+    display: flex;
+    cursor: pointer;
+    background: rgba(118, 117, 123, 1);
+    border-radius: 16px;
+    width: 56px;
+    height: 40px;
+    position: relative;
+
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu .close-state .burger::before,
+.mobile-menu .close-state .burger::after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 2px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    transition: transform 0.4s;
+}
+
+.mobile-menu .burger-checkbox:checked~.close-state .burger::before {
+    transform: translateY(1px) rotate(45deg);
+    width: 22px;
+}
+
+.mobile-menu .burger-checkbox:checked~.close-state .burger::after {
+    transform: translateY(-3px) rotate(-45deg);
+    width: 22px;
+}
+
+.mobile-menu .burger-checkbox:checked~.close-state .logo {
+    visibility: hidden;
+}
+
+.mobile-menu .nav-list {
+    list-style: none;
+    display: none;
+}
+
+.mobile-menu .burger-checkbox:checked~.nav-list {
+    display: block;
+}
+
+.mobile-menu .nav-list .item {
+    font-size: 24px;
+    line-height: 28px;
+    display: block;
+    padding: 24px;
+
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.mobile-menu .nav-list .item .login {
+    background: rgba(235, 235, 235, 1);
+    padding: 6px 16px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-menu .nav-list li:nth-child(n + 2) {
+    border-top: 1px solid rgba(118, 117, 123, 1);
+}
+
+.mobile-menu .nav-list .item:hover {
+    color: rgba(245, 250, 147, 1);
+}
+
+.mobile-menu .nav-list .item.login-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.mobile-menu .nav-list .item.login-wrapper .text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0px;
+}
+
+.hero-block {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-block .description-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 17px;
+}
+
+.hero-block .description-wrapper .description {
+    max-width: 549px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 53px;
+    margin-top: 14px;
+}
+
+.hero-block .description-wrapper .description .title {
+    position: relative;
+}
+
+.hero-block .description-wrapper .description .title .text {
+    font-weight: 800;
+    font-size: 68px;
+    line-height: 75px;
+}
+
+.hero-block .description-wrapper .description .title .salute-img {
+    position: absolute;
+    top: -14px;
+    right: 13px;
+}
+
+.hero-block .description-wrapper .description .title .underline-img {
+    position: absolute;
+    bottom: -26px;
+    left: 57px;
+}
+
+.hero-block .description-wrapper .description .short-description {
+    font-family: Manrope;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.hero-block .description-wrapper .hero-image {
+    max-width: 444px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+}
+
+.hero-block .hero-form {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.hero-block .hero-form .input {
+    max-width: 317px;
+    width: 100%;
+    padding: 18px 14px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 1);
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(118, 117, 123, 1);
+    border: none;
+    outline: none;
+}
+
+.hero-block .hero-form .button {
+    max-width: 222px;
+    width: 100%;
+    padding: 18px 14px;
+    border-radius: 18px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background: rgba(245, 250, 147, 1);
+    border: none;
+    outline: none;
+}
+
+.hero-block .hero-form .button .text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 1);
+    max-width: 162px;
+    width: 100%;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.features .feature {
+    flex: 1 1 30%;
+    border: 1px solid rgba(245, 250, 147, 1);
+    border-radius: 32px;
+    position: relative;
+    padding: 136px 32px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.features .feature .feature-icon {
+    position: absolute;
+    top: 32px;
+}
+
+.features .feature .feature-icon.left {
+    left: 32px;
+}
+
+.features .feature .feature-icon.center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.features .feature .feature-icon.right {
+    right: 32px;
+}
+
+.features .feature .title {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 54px;
+}
+
+.features .feature .feature-description {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.screens {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.screens .interface-example {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 5%;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.screens .interface-example .work-experience {
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    gap: 24px;
+    max-width: 60.5%;
+    width: 100%;
+    border: 1px solid rgba(51, 51, 51, 1);
+    border-radius: 24px;
+}
+
+.screens .interface-example .work-experience .title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    color: rgba(170, 219, 107, 1);
+}
+
+.screens .interface-example .work-experience .job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.screens .interface-example .work-experience .job-list .job .company .company-name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.screens .interface-example .work-experience .job-list .job .company .period {
+    color: rgba(118, 117, 123, 1);
+}
+
+.screens .interface-example .work-experience .job-list .job .company-link {
+    color: rgb(118, 117, 123);
+    text-decoration: none;
+}
+
+.screens .interface-example .about-me {
+    display: flex;
+    align-items: center;
+    gap: 79px;
+    padding: 29px 72px;
+    border: 1px solid rgba(51, 51, 51, 1);
+    background-color: rgba(20, 14, 23, 1);
+    border-radius: 24px;
+    max-width: 73%;
+    width: 100%;
+
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.screens .interface-example .about-me .my-photo {
+    max-width: 182px;
+    width: 100%;
+}
+
+.screens .interface-example .about-me .my-photo img {
+    width: 100%;
+}
+
+.screens .interface-example .about-me .my-description {
+    max-width: 251px;
+    width: 100%;
+}
+
+.screens .interface-example .about-me .my-description .my-name {
+    font-weight: 800;
+    font-size: 31px;
+    line-height: 34px;
+    margin-bottom: 10px;
+}
+
+.screens .interface-example .about-me .my-description .desription {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    margin-bottom: 29px;
+}
+
+.screens .interface-example .about-me .my-description .write-action {
+    max-width: 106px;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 11px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(249, 214, 158, 1);
+    border-radius: 8px;
+    padding: 8px 6px;
+    text-decoration: none;
+    gap: 3.4%;
+}
+
+.screens .interface-example .about-me .my-description .write-action .text {
+    max-width: 78px;
+    width: 100%;
+}
+
+.screens .interface-example .about-me .my-description .write-action .arrow {
+    max-width: 10px;
+}
+
+.screens .interface-example .portfolio {
+    max-width: 24%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    background: rgba(255, 175, 176, 1);
+    gap: 16px;
+    border-radius: 21px;
+    padding: 21px;
+}
+
+.screens .interface-example .portfolio .project-photo {
+    max-width: 178px;
+    width: 100%;
+}
+
+.screens .interface-example .portfolio .project {
+    display: flex;
+    flex-direction: column;
+    max-width: 178px;
+    width: 100%;
+    gap: 12px;
+}
+
+.screens .interface-example .portfolio .project .project-name {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+}
+
+.screens .interface-example .portfolio .project .project-description {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.screens .interface-example .portfolio .project .show-project {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 118px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    gap: 5px;
+    padding: 12px 9px;
+    border-radius: 12px;
+    color: rgba(0, 0, 0, 1);
+    border: 1px solid rgba(51, 51, 51, 1);
+    text-decoration: none;
+}
+
+.screens .interface-example .portfolio .project .show-project .arrow {
+    max-width: 16px;
+    height: auto;
+}
+
+.screens .screens-description {
+    border: 1px solid rgba(51, 51, 51, 1);
+    border-radius: 32px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.screens .screens-description .text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.screens .screens-description .button {
+    align-self: flex-end;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 1);
+
+    padding: 18px 14px;
+    border-radius: 18px;
+    border: 1px solid rgba(51, 51, 51, 1);
+    background-color: rgba(20, 14, 23, 1);
+}
+
+.tariffs-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.tariffs-wrapper .tariffs {
+    display: flex;
+    align-items: stretch;
+    gap: 32px;
+}
+
+.tariffs-wrapper .tariffs .tarif {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 56px;
+
+    background: rgba(245, 250, 147, 1);
+    border-radius: 32px;
+    padding: 32px;
+}
+
+.tariffs-wrapper .tariffs .tarif .description {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.tariffs-wrapper .tariffs .tarif .description .tarif-name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 26px;
+}
+
+.tariffs-wrapper .tariffs .tarif .description .price-wrapper {}
+
+.tariffs-wrapper .tariffs .tarif .description .price-wrapper .price {
+    font-weight: 800;
+    font-size: 68px;
+    line-height: 75px;
+}
+
+.tariffs-wrapper .tariffs .tarif .description .price-wrapper .month {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.tariffs-wrapper .tariffs .tarif .description .for-whom {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.tariffs-wrapper .tariffs .tarif .description .advantages {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.tariffs-wrapper .tariffs .tarif .description .advantages .item {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 24px;
+
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.tariffs-wrapper .tariffs .tarif .description .advantages .item::before {
+    content: '';
+    background: url('./icons/check.svg');
+    width: 24px;
+    height: 24px;
+}
+
+.tariffs-wrapper .tariffs .tarif .button {
+    align-self: flex-start;
+    background: rgba(0, 0, 0, 1);
+    border-radius: 18px;
+    padding: 18px 14px;
+    max-width: 200px;
+    width: 100%;
+    outline: none;
+    border: none;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.tariffs-wrapper .tariffs .tarif.favorite {
+    position: relative;
+}
+
+.tariffs-wrapper .tariffs .tarif.favorite::before {
+    content: 'Лучший выбор';
+    position: absolute;
+    right: 32px;
+    top: -25px;
+    background: rgba(0, 0, 0, 1);
+    border: 1px solid rgba(51, 51, 51, 1);
+    padding: 14px 14px;
+    border-radius: 18px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.faq .questions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq .questions .question {
+    border: 1px solid rgba(51, 51, 51, 1);
+    border-radius: 32px;
+    padding: 24px;
+}
+
+.faq .questions .question .title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.faq .questions .question .title::after {
+    content: '';
+    background: url('./icons/plus.svg');
+    width: 24px;
+    height: 24px;
+}
+
+.faq .questions .question[open] .title::after {
+    content: '';
+    background: url('./icons/minus.svg');
+    width: 24px;
+    height: 24px;
+}
+
+.faq .questions .question .answer {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: rgba(120, 120, 120, 1);
+    margin-top: 32px;
+}
+
+.footer {
+    display: flex;
+    gap: 24px;
+    padding: 60px 0px;
+}
+
+.footer .column {
+    max-width: 232px;
+    width: 100%;
+}
+
+.footer .column.column-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer .column.column-1 .logo {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding: 4px 8px 4px 0px;
+}
+
+.footer .column.column-1 .logo .text-logo {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer .column.column-1 .links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+}
+
+.footer .column.column-2,
+.footer .column.column-3,
+.footer .column.column-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+}
+
+.footer .column.column-2 .item,
+.footer .column.column-3 .item,
+.footer .column.column-4 .item {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+.feeadback {
+    background: rgba(245, 250, 147, 1);
+    border-radius: 99px;
+    width: 56px;
+    height: 56px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .hero-block .hero-image {
+        opacity: 0.2;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-menu {
+        display: flex;
+    }
+
+    .desctop-menu {
+        display: none;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .screens .interface-example .work-experience {
+        padding: 13px;
+        gap: 17px;
+        border-radius: 17px;
+    }
+
+    .screens .interface-example .work-experience .title {
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 14px;
+    }
+
+    .screens .interface-example .work-experience .job-list {
+        gap: 15px;
+        font-size: 9px;
+        line-height: 14px;
+    }
+
+    .screens .interface-example .work-experience .job-list .job .company .company-name {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .screens .interface-example .about-me {
+        gap: 57px;
+        padding: 21px 52px;
+        border-radius: 17px;
+        top: 53px;
+    }
+
+    .screens .interface-example .about-me .my-photo {
+        max-width: 131px;
+    }
+
+    .screens .interface-example .about-me .my-description {
+        max-width: 180px;
+    }
+
+    .screens .interface-example .about-me .my-description .my-name {
+        font-size: 22px;
+        line-height: 25px;
+        margin-bottom: 7px;
+    }
+
+    .screens .interface-example .about-me .my-description .desription {
+        font-size: 8px;
+        line-height: 9px;
+        margin-bottom: 21px;
+    }
+
+    .screens .interface-example .about-me .my-description .write-action {
+        max-width: 77px;
+        font-size: 6px;
+        line-height: 8px;
+        border-radius: 6px;
+        padding: 6px 4px;
+    }
+
+    .screens .interface-example .about-me .my-description .write-action .text {
+        max-width: 56px;
+        width: 100%;
+    }
+
+    .screens .interface-example .about-me .my-description .write-action .arrow {
+        max-width: 8px;
+    }
+
+    .screens .interface-example .portfolio {
+        gap: 11px;
+        border-radius: 15px;
+        padding: 15px;
+    }
+
+    .screens .interface-example .portfolio .project-photo {
+        max-width: 128px;
+    }
+
+    .screens .interface-example .portfolio .project {
+        max-width: 128px;
+        gap: 8px;
+    }
+
+    .screens .interface-example .portfolio .project .project-name {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .screens .interface-example .portfolio .project .project-description {
+        font-size: 8px;
+        line-height: 12px;
+    }
+
+    .screens .interface-example .portfolio .project .show-project {
+        max-width: 85px;
+        font-size: 8px;
+        line-height: 12px;
+        gap: 4px;
+        padding: 8px 7px;
+        border-radius: 8px;
+    }
+
+    .screens .interface-example .portfolio .project .show-project .arrow {
+        max-width: 11px;
+    }
+
+    .tariffs-wrapper .tariffs {
+        flex-wrap: wrap;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+    }
+
+    .footer .column {
+        max-width: 352px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-block .description-wrapper .description .title .salute-img {
+        max-width: 74px;
+        right: 30px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .hero-block .description-wrapper .description .title .underline-img {
+        left: 0px;
+        max-width: 162px;
+        width: 100%;
+    }
+
+    .hero-block .description-wrapper .hero-image {
+        max-width: 260px;
+        width: 100%;
+    }
+
+    .hero-block .hero-form {
+        flex-direction: column;
+        gap: 16px;
+        align-items: start;
+    }
+
+    .hero-block .description-wrapper .description .title .text {
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 54px;
+    }
+
+    .screens .interface-example .work-experience {
+        padding: 6px;
+        gap: 8px;
+        border-radius: 8px;
+    }
+
+    .screens .interface-example .work-experience .title {
+        font-weight: 600;
+        font-size: 6px;
+        line-height: 7px;
+    }
+
+    .screens .interface-example .work-experience .job-list {
+        gap: 7px;
+        font-size: 5px;
+        line-height: 7px;
+    }
+
+    .screens .interface-example .work-experience .job-list .job .company .company-name {
+        font-size: 6px;
+        line-height: 7px;
+    }
+
+    .screens .interface-example .about-me {
+        gap: 26px;
+        padding: 9px 24px;
+        border-radius: 8px;
+        top: 25px;
+    }
+
+    .screens .interface-example .about-me .my-photo {
+        max-width: 61px;
+    }
+
+    .screens .interface-example .about-me .my-description {
+        max-width: 84px;
+    }
+
+    .screens .interface-example .about-me .my-description .my-name {
+        font-size: 10px;
+        line-height: 11px;
+        margin-bottom: 3px;
+    }
+
+    .screens .interface-example .about-me .my-description .desription {
+        font-size: 4px;
+        line-height: 4px;
+        margin-bottom: 9px;
+    }
+
+    .screens .interface-example .about-me .my-description .write-action {
+        max-width: 36px;
+        font-size: 3px;
+        line-height: 4px;
+        border-radius: 3px;
+        padding: 2px 2px;
+    }
+
+    .screens .interface-example .about-me .my-description .write-action .text {
+        max-width: 26px;
+    }
+
+    .screens .interface-example .about-me .my-description .write-action .arrow {
+        max-width: 4px;
+    }
+
+    .screens .interface-example .portfolio {
+        gap: 5px;
+        border-radius: 7px;
+        padding: 7px;
+    }
+
+    .screens .interface-example .portfolio .project-photo {
+        max-width: 60px;
+    }
+
+    .screens .interface-example .portfolio .project {
+        max-width: 60px;
+        gap: 5px;
+    }
+
+    .screens .interface-example .portfolio .project .project-name {
+        font-size: 9px;
+        line-height: 12px;
+    }
+
+    .screens .interface-example .portfolio .project .project-description {
+        font-size: 4px;
+        line-height: 6px;
+    }
+
+    .screens .interface-example .portfolio .project .show-project {
+        max-width: 40px;
+        font-size: 4px;
+        line-height: 5px;
+        gap: 2px;
+        padding: 4px 3px;
+        border-radius: 4px;
+    }
+
+    .screens .interface-example .portfolio .project .show-project .arrow {
+        max-width: 5px;
+    }
+
+    .tariffs-wrapper .tariffs {
+        flex-direction: column;
+    }
+
+    .tariffs-wrapper .tariffs .tarif {
+        gap: 24px;
+    }
+
+    .faq .questions .question .title {}
+
+    .footer {
+        flex-direction: column;
+    }
+}
